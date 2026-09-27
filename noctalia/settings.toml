@@ -62,36 +62,14 @@ hidden_tabs = [ "power", "screen-time" ]
 [desktop_widgets]
 enabled = false
 
-[dock]
-active_opacity = 0.59999998658895493
-background_opacity = 0.59999998658895493
-concave_edge_corners = false
-inactive_opacity = 0.74999998323619366
-magnification = false
-radius = 8
-shadow = false
-
 [idle]
-behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+behavior_order = [ "screen-off" ]
 pre_action_fade_seconds = 3
-
-    [idle.behavior.lock]
-    action = "lock"
-    enabled = false
-    timeout = 600.0
-
-    [idle.behavior.lock-and-suspend]
-    action = "lock_and_suspend"
-    enabled = false
-    timeout = 900.0
 
     [idle.behavior.screen-off]
     action = "screen_off"
     enabled = true
     timeout = 600.0
-
-[keybinds]
-validate = [ "Return" ]
 
 [location]
 auto_locate = true
@@ -278,11 +256,6 @@ show_location = false
     transparency_mode = "glass"
     wallpaper_placement = "floating"
     wallpaper_position = "top_right"
-
-    [shell.screenshot]
-    copy_to_clipboard = false
-    freeze_screen = false
-    save_to_file = false
 
     [shell.session]
     show_shortcuts = false
