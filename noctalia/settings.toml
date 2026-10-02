@@ -77,6 +77,8 @@ auto_locate = true
 [lockscreen]
 blur_intensity = 0.0
 tint_intensity = 0.4999999888241291
+transition = [ "fade" ]
+transition_duration = 200
 
 [lockscreen_widgets]
 enabled = true
