@@ -1,4 +1,4 @@
-config_version = 14
+config_version = 15
 
 [audio]
 enable_sounds = true
@@ -237,9 +237,12 @@ show_location = false
     auto_paste = "off"
     categories = false
     compact = true
+    default_view = "all"
     fetch_exchange_rates = false
+    layout = "simple"
     show_app_origin_indicator = false
     sort_by_usage = false
+    track_usage = false
 
         [shell.launcher.providers.calculator]
         global = false
