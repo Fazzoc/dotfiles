@@ -1,4 +1,4 @@
-config_version = 15
+config_version = 16
 
 [audio]
 enable_sounds = true
@@ -16,6 +16,7 @@ order = [ "bar" ]
     capsule = true
     capsule_opacity = 0.59999998658895493
     capsule_radius = 8
+    compositor_blur = false
     concave_edge_corners = false
     end = [ "media", "tray", "notifications", "clipboard", "volume", "battery", "weather", "control-center" ]
     font_family = "Red Hat Mono Medium"
@@ -33,6 +34,9 @@ order = [ "bar" ]
         [bar.bar.monitor.GS1562]
         enabled = false
 
+[bluetooth]
+connection_notifications = false
+
 [brightness]
 enable_ddcutil = true
 
@@ -43,6 +47,9 @@ hidden_tabs = [ "power", "screen-time" ]
 
     [control_center.calendar]
     show_events_card = false
+
+    [control_center.media]
+    show_visualizer = false
 
     [[control_center.shortcuts]]
     type = "wifi"
@@ -109,7 +116,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 8.0
         center_password_text = false
@@ -138,7 +145,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.0
         background_radius = 0.0
         center_password_text = false
@@ -166,7 +173,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.59999999999999998
         background_radius = 8.0
         center_password_text = false
@@ -194,7 +201,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@winit".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -235,7 +242,6 @@ clipboard_history_max_entries = 30
 font_family = "Red Hat Mono Medium"
 polkit_agent = true
 popup_borders = false
-popup_shadows = false
 settings_window_translucent = true
 show_location = false
 
@@ -255,18 +261,19 @@ show_location = false
 
     [shell.panel]
     borders = false
-    clipboard_position = "top_right"
+    clipboard_position = "auto"
     control_center_placement = "floating"
-    control_center_position = "top_right"
-    launcher_position = "top_left"
+    launcher_position = "auto"
+    open_near_click_clipboard = true
+    open_near_click_control_center = true
+    open_near_click_launcher = true
     open_near_click_wallpaper = true
-    polkit_position = "top_center"
+    polkit_position = "auto"
     session_placement = "floating"
     session_position = "center"
     shadow = false
     transparency_mode = "glass"
     wallpaper_placement = "floating"
-    wallpaper_position = "top_right"
 
     [shell.session]
     show_shortcuts = false
@@ -318,6 +325,7 @@ wallpaper_scheme = "m3-fruit-salad"
     community_ids = [ "zen-browser" ]
 
 [wallpaper]
+directory = "~/Pictures/Wallpapers"
 transition = [ "fade" ]
 
     [wallpaper.default]

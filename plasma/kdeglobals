@@ -134,7 +134,7 @@ ForegroundVisited=189,240,179
 
 [General]
 AccentColor=0,0,0,0
-ColorScheme=Noctalia
+ColorScheme=noctalia
 ColorSchemeHash=2022dc5a585d14e6d361b3d53389e080e95df2c6
 LastUsedCustomAccentColor=61,174,233
 Name=noctalia
